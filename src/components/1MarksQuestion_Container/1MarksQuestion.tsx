@@ -1,14 +1,17 @@
 import React from 'react';
 
 function OneMarkQuestion({ data }: any) {
-  const handleONSubmit = (e: any) => {
-    e.preventDefault();
-    console.log(e.target);
-  };
   const GenerateQuestions = () => {
     let Questions = [];
 
+    const allData: any = [];
+
     for (let i = 1; i <= data; i++) {
+      let value: any;
+      const handleONSubmit = (e: any) => {
+        e.preventDefault();
+        allData.push(value);
+      };
       Questions.push(
         <div key={i} className='questionContainer'>
           <h5> Que-No: {i} </h5>
@@ -16,6 +19,9 @@ function OneMarkQuestion({ data }: any) {
             Ans :-
             <input
               type='text'
+              onChange={(e) => {
+                value = e.target.value;
+              }}
               className='textValue'
               name='TextValue'
               multiple
@@ -25,6 +31,7 @@ function OneMarkQuestion({ data }: any) {
             <button type='submit' className='submitButton'>
               Send
             </button>
+            <p className='printedAnswer'> {value} </p>
           </form>
         </div>
       );

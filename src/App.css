@@ -1,5 +1,6 @@
 .App {
   padding: 0px 32px;
+  transition: 2s;
 }
 
 .container .questionLength .submitButton {
@@ -19,7 +20,7 @@
   padding: 0;
 }
 
-/* CSS FOR GENERATED QUESTIONS */
+/* CSS FOR ADMIN SIDE QUESTIONS */
 .questionContainer {
   background-color: #e3f2fd;
   border-radius: 10px;
@@ -39,4 +40,13 @@
 }
 .questionContainer .form .textValue::placeholder {
   color: whitesmoke;
+}
+
+/* CSS FOR CANDIDATE SIDE QUESTIONS */
+.candidateContainer {
+  padding: 10px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  background: #e3f2fd;
+  box-shadow: 5px 5px 0px #7b8389, -5px -5px 0px #ffffff;
 }
