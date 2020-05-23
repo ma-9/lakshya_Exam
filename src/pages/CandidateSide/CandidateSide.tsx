@@ -2,13 +2,15 @@ import React, { useState, useEffect } from 'react';
 import FirebaseDatabase from 'api';
 
 function CandidateSide() {
-  const queRef = FirebaseDatabase.ref('/questions');
+  const queRef = FirebaseDatabase.ref('/questions/admin');
   const [data, setData] = useState([]);
   useEffect(() => {
     queRef.on('value', (snapshot) => {
       setData(snapshot.val());
     });
   }, []);
+
+  console.log(data);
   return (
     <div className='App'>
       <h1>Candidate Side</h1>

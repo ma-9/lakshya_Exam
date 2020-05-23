@@ -8,14 +8,9 @@ if (!firebase.apps.length) {
 
 const database = firebase.database();
 
-export const fetchSampleData = () => {
-  // const FetchedData = ;
-  return data;
-};
-
 export const sendDataToFirebase = async (data: any, index: any) => {
   console.log('Firebase sending', data);
-  await database.ref('/questions/' + index).set(data);
+  await database.ref('/questions/admin' + index).set(data);
 };
 
 // export const fet = () => {
