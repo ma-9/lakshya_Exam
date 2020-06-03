@@ -1,4 +1,3 @@
-import { data } from 'temp/data';
 import firebase from 'firebase';
 import { firebaseConfig } from 'config';
 
@@ -7,16 +6,5 @@ if (!firebase.apps.length) {
 }
 
 const database = firebase.database();
-
-export const sendDataToFirebase = async (data: any, index: any) => {
-  console.log('Firebase sending', data);
-  await database.ref('/questions/admin' + index).set(data);
-};
-
-// export const fet = () => {
-//   database.ref('/questions').on('value', (snapshot) => {
-//     console.log(snapshot.val());
-//   });
-// };
 
 export default database;
