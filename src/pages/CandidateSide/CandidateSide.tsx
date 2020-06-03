@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FirebaseDatabase from 'api';
-import { fullFroms } from 'temp/data';
+import { fullFroms, LoadingGif } from 'temp/data';
 
 function CandidateSide() {
   const queRef = FirebaseDatabase.ref('/questions/admin');
@@ -19,9 +19,10 @@ function CandidateSide() {
 
   return (
     <div className='App'>
-      <h1>Candidate Side</h1>
+      <h1 className='main-heading'>Candidate Side</h1>
       <div className='container'>
-        {data &&
+        {data ? (
+          data &&
           data.map((value: any) => {
             return (
               <div
@@ -33,10 +34,16 @@ function CandidateSide() {
                 <p className='Answer'>Ans:- {value.Answer} </p>
               </div>
             );
-          })}
+          })
+        ) : (
+          <div className='four-o-four-container'>
+            <h3>Wait for a while.. we are fetching next Questions..</h3>
+            <img src={LoadingGif} alt='Loading..' />
+          </div>
+        )}
       </div>
       <div className='fullform-container'>
-        <h3>Full Forms</h3>
+        <h3>Full Forms for help</h3>
         <div className='fullforms'>
           {fullFroms.map((data, index) => {
             return (

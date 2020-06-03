@@ -3,6 +3,17 @@
   transition: 2s;
 }
 
+.App .main-heading {
+  background-color: #eaf0f1;
+  text-align: center;
+  font-weight: 400;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-box-shadow: 6px 10px 34px -7px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 6px 10px 34px -7px rgba(0, 0, 0, 0.31);
+  box-shadow: 6px 10px 34px -7px rgba(0, 0, 0, 0.31);
+}
+
 .container .questionLength .submitButton {
   padding: 10px 20px;
   border: none;
@@ -66,4 +77,16 @@
 }
 .fullform-container .fullforms p {
   font-size: 12px;
+}
+
+/* 404 Container */
+.four-o-four-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.four-o-four-container img {
+  height: 110px;
+  width: 210px;
 }

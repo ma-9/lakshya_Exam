@@ -51,3 +51,5 @@ export const fullFroms = [
   { Que: 'IOT', Ans: 'INTERNET OF THINGS' },
   { Que: 'MPI', Ans: 'MASTER PATIENT INDEX' },
 ];
+
+export const LoadingGif = require('./loading.gif');
