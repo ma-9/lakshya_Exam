@@ -1,5 +1,6 @@
 export const fullFroms = [
   { Que: 'DW', Ans: 'DATA WAREHOUSE' },
+  { Que: 'POW', Ans: 'PROOF OF WORK' },
   { Que: 'OLTP', Ans: 'ONLINE TRANSACTIONAL PROCESSIONG' },
   { Que: 'OLAP', Ans: 'ONLINE ANALYTICAL PROCESSIONG' },
   { Que: 'ETL', Ans: 'EXTRACT TRANSFORM LOAD' },
