@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FirebaseDatabase from 'api';
-import { fullFroms, LoadingGif } from 'temp/data';
+import { fullFroms, LoadingGif, ExamOver } from 'temp/data';
 
 function CandidateSide() {
   const queRef = FirebaseDatabase.ref('/questions/admin');
@@ -37,8 +37,8 @@ function CandidateSide() {
           })
         ) : (
           <div className='four-o-four-container'>
-            <h3>Wait for a while.. we are fetching next Questions..</h3>
-            <img src={LoadingGif} alt='Loading..' />
+            <h3>We done it... Thanks for being with us.</h3>
+            <img src={ExamOver} alt='Loading..' />
           </div>
         )}
       </div>

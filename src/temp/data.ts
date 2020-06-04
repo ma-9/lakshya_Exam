@@ -56,3 +56,4 @@ export const fullFroms = [
 ];
 
 export const LoadingGif = require('./loading.gif');
+export const ExamOver = require('./exam over.gif');
