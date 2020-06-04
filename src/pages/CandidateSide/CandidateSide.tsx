@@ -21,38 +21,9 @@ function CandidateSide() {
     <div className='App'>
       <h1 className='main-heading'>Candidate Side</h1>
       <div className='container'>
-        {data ? (
-          data &&
-          data.map((value: any) => {
-            return (
-              <div
-                key={Math.random()}
-                className='candidateContainer'
-                style={{ backgroundColor: `${colors[getRandomInt()]}` }}
-              >
-                <h3 className='Question'> Que:- {value.Question} </h3>
-                <p className='Answer'>Ans:- {value.Answer} </p>
-              </div>
-            );
-          })
-        ) : (
-          <div className='four-o-four-container'>
-            <h3>We done it... Thanks for being with us.</h3>
-            <img src={ExamOver} alt='Loading..' />
-          </div>
-        )}
-      </div>
-      <div className='fullform-container'>
-        <h3>Full Forms for help</h3>
-        <div className='fullforms'>
-          {fullFroms.map((data, index) => {
-            return (
-              <p key={index}>
-                {' '}
-                <b> {data.Que} </b> : <i> {data.Ans} </i>{' '}
-              </p>
-            );
-          })}
+        <div className='four-o-four-container'>
+          <h3>We done it... Thanks for being with us.</h3>
+          <img src={ExamOver} alt='Loading..' />
         </div>
       </div>
     </div>
